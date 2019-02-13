@@ -16,13 +16,13 @@ public class HuffEncode {
 		FileInputStream fis = new FileInputStream(input_file_name);
 		InputStreamBitSource source = new InputStreamBitSource(fis);
 		int[] symbol_counts = new int[256];
-		int num_symbols = 0;
-
+		int num_symbols =  (int) new File(input_file_name).length();
+		int in = 0;
 		try {
-			while(num_symbols <  574992) {
+			while(in  <  num_symbols) {
 				int n  = source.next(8);
 				symbol_counts[n]++;
-				num_symbols++;
+				in++;
 			}
 		} catch (InsufficientBitsLeftException e) {
 			System.out.println("insufficient bits to read " + num_symbols);
