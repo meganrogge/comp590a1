@@ -6,7 +6,7 @@ import java.io.IOException;
 import io.InputStreamBitSource;
 import io.InsufficientBitsLeftException;
 import io.OutputStreamBitSink;
-//to see the decoder decode what this encoder has encoded, go to main/DecoderMain.java and uncomment as I say to at the top
+//to see the decoder decode what this encoder has encoded, go to main/DecoderMain.java
 public class HuffEncode {
 
 	public static void main(String[] args) throws IOException, InsufficientBitsLeftException {
