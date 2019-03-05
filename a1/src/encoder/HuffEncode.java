@@ -54,7 +54,7 @@ public class HuffEncode {
 		InputStreamBitSource i = new InputStreamBitSource(fis);
 	
 		int index = 0;
-		while(index < 575022) {
+		while(index < num_symbols) {
 			try {
 				bit_sink.write(encoder.getCode(i.next(8)));
 			} catch (InsufficientBitsLeftException e) {
